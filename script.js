@@ -11,14 +11,13 @@ const getSum = () => {
     }
 
     const table = document.querySelector("table");
-
-    // Remove previous total row if it exists
+	
     const oldRow = document.getElementById("total-row");
     if (oldRow) {
         oldRow.remove();
     }
 
-    const tr = document.createElement("tr");
+    const tr = document.getElementById("total");
     tr.id = "total-row";
 
     const td = document.createElement("td");
@@ -26,7 +25,6 @@ const getSum = () => {
     td.textContent = sum;
 
     tr.appendChild(td);
-    table.appendChild(tr);
 };
 
 getSumBtn.addEventListener("click", getSum);
